@@ -1,6 +1,12 @@
 name: CD FALSO
 on:
   workflow_dispatch:
+      inputs:
+          ambiente:
+              type: choice
+              options:
+                  - homologacao 
+                  - producao
 jobs:
   fake-deploy:
         runs-on: ubuntu-latest
